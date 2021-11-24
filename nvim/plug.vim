@@ -29,6 +29,7 @@ if has("nvim")
   Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

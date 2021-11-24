@@ -7,4 +7,7 @@
 - tmux config
 - fish config
 
+# Plugins manager
+- [vim-plug](https://github.com/junegunn/vim-plug)
+- [neobundle](https://github.com/Shougo/neobundle.vim)
 

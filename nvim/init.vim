@@ -122,6 +122,8 @@ if has("unix")
 endif
 
 runtime ./maps.vim
+
+runtime ./neoBundle.vim
 "}}}
 
 " Syntax theme "{{{

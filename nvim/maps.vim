@@ -70,6 +70,11 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
+" for command mode
+nnoremap <S-Tab> <<
+" for insert mode
+inoremap <S-Tab> <C-d>
+
 
 " clipboard
 vmap <silent> <C-c> "+y
@@ -77,6 +82,7 @@ nmap <silent> <C-c> "+yy
 vmap <silent> <C-v> "+p
 imap <silent> <C-v> <Esc>"+pa
 imap <silent> <C-X> <Esc>dd
+nmap <silent> <C-X> <Esc>dd
 
 " back up
 nnoremap <c-z> :u<CR>

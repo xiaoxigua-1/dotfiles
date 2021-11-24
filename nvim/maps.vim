@@ -65,3 +65,30 @@ nmap <C-w><down> <C-w>-
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+
+" clipboard
+vmap <silent> <C-c> "+y
+nmap <silent> <C-c> "+yy
+vmap <silent> <C-v> "+p
+imap <silent> <C-v> <Esc>"+pa
+imap <silent> <C-X> <Esc>dd
+
+" back up
+nnoremap <c-z> :u<CR>
+inoremap <c-z> <c-o>:u<CR>
+
+" Remake
+nnoremap <C-Y> <C-R>
+inoremap <C-Y> <C-O><C-R>
+" Save file
+nnoremap <C-S> :update<cr>
+inoremap <C-S> <Esc>:update<cr>gi
+
+" Search text
+nmap <c-f><c-f> <plug>(esearch)
+map  <c-f>      <plug>(operator-esearch-prefill)

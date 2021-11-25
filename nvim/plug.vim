@@ -42,6 +42,7 @@ if has("nvim")
   Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'sheerun/vim-polyglot' 
+  Plug 'dense-analysis/ale'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

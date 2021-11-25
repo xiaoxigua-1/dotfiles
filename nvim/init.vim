@@ -8,6 +8,7 @@ scriptencoding utf-8
 " stop loading config if it's on tiny or small
 if !1 | finish | endif
 
+set mouse=iv
 set nocompatible
 set number
 syntax enable
@@ -145,6 +146,8 @@ endif
 
 "}}}
 
+
+let g:ale_disable_lsp = 1
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc

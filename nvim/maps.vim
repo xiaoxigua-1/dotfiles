@@ -7,7 +7,6 @@ nnoremap x "_x
 
 " Increment/decrement
 nnoremap + <C-a>
-nnoremap - <C-x>
 
 " Delete a word backwards
 nnoremap dw vb"_d
@@ -81,8 +80,8 @@ vmap <silent> <C-c> "+y
 nmap <silent> <C-c> "+yy
 vmap <silent> <C-v> "+p
 imap <silent> <C-v> <Esc>"+pa
-imap <silent> <C-X> <Esc>dd
-nmap <silent> <C-X> <Esc>dd
+vnoremap <C-X> "+x
+imap <silent> <C-X> <Esc>V"+x 
 
 " back up
 nnoremap <c-z> :u<CR>

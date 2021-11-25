@@ -3,9 +3,16 @@ if has("nvim")
 endif
 
 call plug#begin()
-
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+
+if has('win32') || has('win64')
+  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+else
+  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+endif
+
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -30,6 +37,11 @@ if has("nvim")
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+"  Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+  Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+  Plug 'sheerun/vim-polyglot' 
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

@@ -11,3 +11,8 @@
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - [neobundle](https://github.com/Shougo/neobundle.vim)
 
+
+# Fonts
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
+
+

@@ -11,8 +11,8 @@
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - [neobundle](https://github.com/Shougo/neobundle.vim)
 
-
 # Fonts
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
-
+# My markdowwn notes manager
+- [Obsidian](https://obsidian.md/)

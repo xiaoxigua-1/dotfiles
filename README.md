@@ -1,5 +1,5 @@
 # Xiao xigua's config
-### Based on [dotfiles-public](https://github.com/craftzdog/dotfiles-public) modification .
+### Based on [dotfiles-public](https://github.com/craftzdog/dotfiles-public), [.tmux](https://github.com/gpakosz/.tmux) modification .
 
 
 ## Contents

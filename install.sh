@@ -1,9 +1,8 @@
-#!/bin/sh
-
-
+#!/bin/bash
 
 fish_install () {
   if [ ! -f /usr/bin/fish ]
+  then
     sudo apt-add-repository ppa:fish-shell/release-3
     sudo apt-get update
     sudo apt-get update
@@ -28,20 +27,19 @@ nvim_install () {
 }
 
 tmux_install () {
-  cp './tmux/' ~
+  cp './tmux/*' ~
 }
-
 
 if [ "$1" = "fish" ]
 then
   fish_install()
 elif [ $1 = "nvim" ]
+then
   nvim_install()
   echo "c"
-then
 elif [ $1 = "tmux" ]
-  tmux_install()
 then
+  tmux_install()
 else
   fish_install()
   nvim_install()

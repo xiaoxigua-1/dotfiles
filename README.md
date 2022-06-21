@@ -14,5 +14,3 @@
 # Fonts
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
-# My markdowwn notes manager
-- [Obsidian](https://obsidian.md/)

@@ -2,9 +2,7 @@
 
 # clone repo
 git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-mkdir extra
-cd extra
+cd alacritty/extra
 
 latest=$(wget -O - https://api.github.com/repos/alacritty/alacritty/releases | jq '.[0]')
 version=$(jq -nr "${latest}|.tag_name")

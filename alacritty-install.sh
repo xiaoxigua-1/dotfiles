@@ -20,7 +20,7 @@ wget ${logo_url} ${desktop_url} ${config_url}
 cd ..
 
 # Build
-cargo build --releases
+cargo build --release
 
 # Install
 sudo cp target/release/alacritty /usr/local/bin

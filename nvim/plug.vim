@@ -38,11 +38,11 @@ if has("nvim")
   Plug 'ryanoasis/vim-devicons'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-"  Plug 'aca/completion-tabnine', { 'do': './install.sh' }
   Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'sheerun/vim-polyglot' 
   Plug 'dense-analysis/ale'
+  Plug 'rust-lang/rust.vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

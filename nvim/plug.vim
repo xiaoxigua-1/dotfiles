@@ -43,6 +43,7 @@ if has("nvim")
   Plug 'sheerun/vim-polyglot' 
   Plug 'dense-analysis/ale'
   Plug 'rust-lang/rust.vim'
+  Plug 'mhinz/vim-startify'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

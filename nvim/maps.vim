@@ -97,3 +97,4 @@ inoremap <C-S> <Esc>:update<cr>gi
 " Search text
 nmap <c-f><c-f> <plug>(esearch)
 map  <c-f>      <plug>(operator-esearch-prefill)
+

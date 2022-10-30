@@ -5,7 +5,7 @@
 - neovim config
 - tmux config
 - fish config
-- alacritty confit
+- alacritty config
 
 # Plugins manager
 - [vim-plug](https://github.com/junegunn/vim-plug)

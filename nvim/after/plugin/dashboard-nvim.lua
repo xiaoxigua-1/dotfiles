@@ -20,25 +20,25 @@ dashboard.custom_center = {
     --     action = "Leaderf rg --popup",
     --     shortcut = "<Leader> f g",
     -- },
-    -- {
-    --     icon = "  ",
-    --     desc = "Open Nvim config                        ",
-    --     action = "tabnew $MYVIMRC | tcd %:p:h",
-    --     shortcut = "<Leader> e v",
-    -- },
-    -- {
-    --     icon = "  ",
-    --     desc = "New file                                ",
-    --     action = "enew",
-    --     shortcut = "e           ",
-    -- },
-    -- {
-    --     icon = "  ",
-    --     desc = "Quit Nvim                               ",
-    --     -- desc = "Quit Nvim                               ",
-    --     action = "qa",
-    --     shortcut = "q           ",
-    -- },
+    {
+        icon = "  ",
+        desc = "Open Nvim config                        ",
+        action = "tabnew $MYVIMRC | tcd %:p:h",
+        shortcut = "<Leader> e v",
+    },
+    {
+        icon = "  ",
+        desc = "New file                                ",
+        action = "enew",
+        shortcut = "e           ",
+    },
+    {
+        icon = "  ",
+        desc = "Quit Nvim                               ",
+        -- desc = "Quit Nvim                               ",
+        action = "qa",
+        shortcut = "q           ",
+    },
 }
 dashboard.custom_header = {
     '',

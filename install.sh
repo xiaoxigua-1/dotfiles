@@ -23,22 +23,18 @@ fish_install () {
 }
 
 nvim_install () {
-  cp ./nvim ~/.config/
+  cp -r ./nvim ~/.config/
 }
 
 tmux_install () {
-  cp './tmux/*' ~
+  cp -r './tmux/*' ~
 }
 
-if [ "$1" = "fish" ]
-then
+if [[ $1 -eq "fish" ]]; then
   fish_install()
-elif [ $1 = "nvim" ]
-then
+elif [[ $1 -eq "nvim" ]]; then
   nvim_install()
-  echo "c"
-elif [ $1 = "tmux" ]
-then
+elif [[ $1 -eq "tmux" ]]; then
   tmux_install()
 else
   fish_install()

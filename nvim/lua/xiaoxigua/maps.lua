@@ -45,3 +45,9 @@ keymap.set('i', '<C-v>', '<Esc>"+pa')
 -- Cut text
 keymap.set('i', '<C-X>', '<ESC>V"+x')
 keymap.set({ 'v', 'n' }, '<C-x>', '"+x')
+-- Undo
+keymap.set('n', '<C-z>', ':u<CR>')
+keymap.set('i', '<C-z>', '<c-o>:u<CR>')
+-- Redo
+keymap.set('n', '<C-y>', '<C-R>')
+keymap.set('i', '<C-y>', '<C-O><C-R>')

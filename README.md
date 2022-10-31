@@ -2,10 +2,10 @@
 ### Based on [dotfiles-public](https://github.com/craftzdog/dotfiles-public), [.tmux](https://github.com/gpakosz/.tmux) modification .
 
 ## Contents
-- neovim config
-- tmux config
-- fish config
-- alacritty config
+- [neovim config](./nvim/)
+- [tmux config](./tmux/)
+- [fish config](./fish/)
+- [alacritty config](./alacritty/)
 
 ## Neovim setup
 - [list](https://github.com/craftzdog/dotfiles-public#neovim-setup)

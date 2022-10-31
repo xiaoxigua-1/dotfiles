@@ -2,24 +2,12 @@ local status, dashboard = pcall(require, "dashboard")
 if (not status) then return end
 
 dashboard.custom_center = {
-    -- {
-    --     icon = "  ",
-    --     desc = "Find  File                              ",
-    --     action = "Leaderf file --popup",
-    --     shortcut = "<Leader> f f",
-    -- },
-    -- {
-    --     icon = "  ",
-    --     desc = "Recently opened files                   ",
-    --     action = "Leaderf mru --popup",
-    --     shortcut = "<Leader> f r",
-    -- },
-    -- {
-    --     icon = "  ",
-    --     desc = "Project grep                            ",
-    --     action = "Leaderf rg --popup",
-    --     shortcut = "<Leader> f g",
-    -- },
+    {
+        icon = "  ",
+        desc = "Find  File                              ",
+        action = ":Telescope file_browser",
+        shortcut = "<Leader> ff",
+    },
     {
         icon = "  ",
         desc = "Open Nvim config                        ",

@@ -6,7 +6,7 @@ dashboard.custom_center = {
         icon = "  ",
         desc = "Find  File                              ",
         action = ":Telescope file_browser",
-        shortcut = "<Leader> ff",
+        shortcut = "<Leader> f f",
     },
     {
         icon = "  ",

@@ -2,7 +2,6 @@ local home = os.getenv('HOME')
 local status, dashboard = pcall(require, "dashboard")
 if (not status) then return end
 
--- use https://lachlanarthur.github.io/Braille-ASCII-Art/ gen
 local header_file = home .. '/.config/nvim/static/miru_ha.txt'
 local header_lines = {}
 

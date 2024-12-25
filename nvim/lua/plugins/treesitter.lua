@@ -20,6 +20,7 @@ return {
 				"scss",
 				"sql",
 				"svelte",
+				"rust",
 			},
 
 			-- matchup = {

@@ -1,12 +1,12 @@
 return {
 	{
-		"craftzdog/solarized-osaka.nvim",
+		"catppuccin/nvim",
 		lazy = true,
 		priority = 1000,
-		opts = function()
-			return {
-				transparent = true,
-			}
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true,
+			})
 		end,
 	},
 }

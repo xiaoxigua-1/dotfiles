@@ -36,6 +36,13 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 - [wlogout](https://github.com/ArtsyMacaw/wlogout)
 
 ## Yazi setup
+
+### Requirements
+- [ouch](https://github.com/ouch-org/ouch)
+- [exiftool](https://exiftool.org/)
+- [MediaInfo](https://mediaarea.net/en/MediaInfo) **Optional**
+
+### Installation
 Install all the plugins with locked versions from package.toml
 ```sh
 ya pack -i

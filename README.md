@@ -1,20 +1,48 @@
-# Xiao xigua's config
-### Based on [dotfiles-public](https://github.com/craftzdog/dotfiles-public), [.tmux](https://github.com/gpakosz/.tmux) modification.
+# Xiao xigua's dotfiles
 
-## Contents
-- [neovim config](./nvim/)
-- [tmux config](./tmux/)
-- [fish config](./fish/)
-- [alacritty config](./alacritty/)
+## Neovim
+Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-public)
 
-## Neovim setup
-- [list](https://github.com/craftzdog/dotfiles-public#neovim-setup)
-- [Nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-- [Dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
-- [rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
+### Requirements
+- Neovim >= **0.9.0** (needs to be built with **LuaJIT**)
+- Git >= **2.19.0** (for partial clones support)
+- [LazyVim](https://www.lazyvim.org/)
+- a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater) **_(optional, but needed to display some icons)_**
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- a **C** compiler for `nvim-treesitter`. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
+- for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+  - **live grep**: [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - **find files**: [fd](https://github.com/sharkdp/fd)
+- a terminal that support true color and *undercurl*:
+  - [kitty](https://github.com/kovidgoyal/kitty) **_(Linux & Macos)_**
+  - [wezterm](https://github.com/wez/wezterm) **_(Linux, Macos & Windows)_**
+  - [alacritty](https://github.com/alacritty/alacritty) **_(Linux, Macos & Windows)_**
+  - [iterm2](https://iterm2.com/) **_(Macos)_**
 
-## Fish shell setup
-- [list](https://github.com/craftzdog/dotfiles-public#shell-setup-macos--linux)
-## Fonts
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
+## Hyprland setup
 
+### Requirements
+- [Fcitx5](https://github.com/fcitx/fcitx5)
+- [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
+- [kitty](https://github.com/kovidgoyal/kitty)
+- [Walker](https://github.com/abenz1267/walker)
+- [Yazi](https://github.com/sxyazi/yazi)
+- [cliphist](https://github.com/sentriz/cliphist)
+- [Waybar](https://github.com/Alexays/Waybar)
+
+### Waybar setup
+#### Requirements
+- [pamixer](https://github.com/cdemoulins/pamixer)
+- [wlogout](https://github.com/ArtsyMacaw/wlogout)
+
+## Yazi setup
+Install all the plugins with locked versions from package.toml
+```sh
+ya pack -i
+```
+
+## kitty
+Kitty tab bar style taken from [dhay3](https://github.com/kovidgoyal/kitty/discussions/4447#discussioncomment-10428277)
+
+## Fish shell
+Fish shell config taken from [craftzdog](https://github.com/craftzdog/dotfiles-public)

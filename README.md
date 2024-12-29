@@ -24,6 +24,8 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 ### Requirements
 - [Fcitx5](https://github.com/fcitx/fcitx5)
 - [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
+- [hyprlock](https://github.com/hyprwm/hyprlock)
+- [hypridle](https://github.com/hyprwm/hypridle)
 - [kitty](https://github.com/kovidgoyal/kitty)
 - [Walker](https://github.com/abenz1267/walker)
 - [Yazi](https://github.com/sxyazi/yazi)

@@ -1,0 +1,138 @@
+* {
+  all: unset;
+}
+
+window {
+  background: none;
+  color: #cdd6f4;
+  font-size: 14px;
+  font-family: "Terminus (TTF)";
+}
+
+tooltip {
+  border-radius: 10px;
+  label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 4px 10px;
+  }
+}
+
+tooltip,
+.time,
+.systray,
+.calendar,
+.workspaces,
+.info,
+.launcher {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 6px 10px;
+}
+
+.launcher {
+  font-size: 24px;
+  padding: 0 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+.time {
+  border-radius: 10px;
+  font-size: 1.1rem;
+  padding: 4px 20px;
+  color: #fab387;
+  font-weight: bold;
+  & * {
+    margin: 0 10px;
+  }
+}
+
+.calendar {
+  padding: 5px;
+  border-radius: 10px;
+  &:selected {
+    background: #e3242b;
+    color: #ffffff;
+  }
+}
+
+.systray {
+  border-radius: 10px;
+  padding: 6px 20px;
+
+  menu {
+    background: #1e1e2e;
+    padding: 10px 0;
+    border-radius: 10px;
+    > menuitem {
+      font-size: 1.1rem;
+      padding: 3px 20px;
+
+      &:disabled label {
+        color: #50515c;
+      }
+
+      &:hover {
+        background-color: #2f2f3f;
+      }
+    }
+
+    separator {
+      padding-top: 5px;
+
+      &:last-child {
+        padding: unset;
+      }
+    }
+  }
+}
+
+.workspaces {
+  border-radius: 10px;
+  .button {
+    margin: 3px 12px;
+    padding: 7px;
+    border-radius: 50%;
+    transition: background 0.3s;
+
+    &.inactive {
+      background-color: #313244;
+    }
+    &.active {
+      background-color: #a6adc8;
+    }
+    &.occupied {
+      font-size: 1.01rem;
+    }
+    &.empty {
+      font-size: 0.8rem;
+    }
+    &.inactive:hover {
+      background: #cdd6f4;
+    }
+  }
+}
+
+.info {
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 1.3rem;
+}
+
+.volume {
+  .circular {
+    border-radius: 50%;
+    background-color: #1e1e2e;
+    color: #1e1e2e;
+  }
+
+  label {
+    padding-right: 10px;
+  }
+}
+
+.battery {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  margin-right: 3px;
+}

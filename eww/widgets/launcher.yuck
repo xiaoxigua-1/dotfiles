@@ -1,0 +1,3 @@
+(defwidget appLauncher []
+  (button :class "launcher" :onclick "walker &"
+    (label :text "󰣇")))

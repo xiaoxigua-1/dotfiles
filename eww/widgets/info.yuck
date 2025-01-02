@@ -1,0 +1,56 @@
+(defvar volumeIcons '{"Master": ["󰝟", "󰕿", "󰖀", "󰕾"], "Capture": ["󰍭", "󰍬", "󰍬", "󰍬"]}')
+
+;; volume variable
+(deflisten volumeInfo :initial 0 "scripts/volume.sh Master")
+(defvar volume_rev false)
+
+;; microphone variable
+(deflisten micInfo :initial 0 "scripts/volume.sh Capture")
+(defvar mic_rev false)
+
+;; mouse battery variable
+(defpoll mouseInfo :interval "2s" "scripts/mouse.sh")
+(defvar mouseIcons '[["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹", "󰁹"], ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅", "󰂅"]]')
+
+(defwidget infoWidget []
+  (box :class "info" :space-evenly false :spacing 30
+    (volume :rev_str "volume_rev" :rev volume_rev :info volumeInfo)
+    (volume :rev_str "mic_rev" :rev mic_rev :info micInfo)
+    (mouseBattery)))
+
+(defwidget volume [rev_str rev info]
+  (eventbox
+    :onhover "eww update ${rev_str}=true"
+    :onhoverlost "eww update ${rev_str}=false"
+    :onscroll "scripts/set_volume.sh ${info.driver} {}"
+    :onclick "scripts/set_volume.sh ${info.driver} mute"
+    :cursor "pointer"
+    :tooltip "${info.level}%"
+    (box :space-evenly false :class "volume"
+      (label :text {info.mute || info.level == 0 ? volumeIcons[info.driver][0] : volumeIcons[info.driver][round(info.level / 41, 0) + 1]})
+      (overlay
+        (revealer
+          :reveal rev
+          :transition "slideleft"
+          (circular-progress :value 100 :start-at 0 :thickness 10 :class "circular"))
+        (circular-progress :value {info.level} :start-at 0 :thickness 4 )))))
+
+(defwidget mouseBattery []
+  (eventbox
+    :cursor "pointer"
+    :visible {mouseInfo == "" ? false : true}
+    :tooltip "${mouseInfo?.name} (${mouseInfo?.battery}%)"
+    :onclick "polychromatic-controller &"
+    (box :space-evenly false
+      (label :text "󰍽 ")
+      (batteryIcon
+        :icons "${mouseIcons[mouseInfo.status]}"
+        :battery {mouseInfo.battery}))))
+
+
+(defwidget batteryIcon [icons battery]
+  (label
+    :class "battery"
+    :valign "end"
+    :text {icons[round(battery / 11, 0)]}
+    :style "color: rgb(${255 - ((battery / 100) * 255)}, ${(battery / 100) * 255}, 0)"))

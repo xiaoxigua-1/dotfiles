@@ -1,0 +1,38 @@
+(defpoll clock_time :interval "1s"
+  "date '+%H : %M'")
+(defpoll clock_date :interval "10h" "date '+%Y / %m / %d'")
+(defvar time_rev false)
+
+(defwidget dateWidget []
+  (eventbox
+    :onhover "eww update time_rev=true"
+    :onhoverlost "eww update time_rev=false"
+    :onclick "eww open calendar --screen 0"
+    (box :space-evenly false :class "time"
+      (label :text "")
+      (label :text "${clock_time}")
+      (revealer
+        :transition "slideleft"
+        :reveal time_rev
+        :duration "350ms"
+        :class "date"
+        (box :space-evenly false
+          (label :text "󰃭")
+          (label :text "${clock_date}"))))))
+
+(defwidget calendarWidget []
+  (eventbox :onhoverlost "eww close calendar"
+    (revealer :transition "slidedown"
+      :reveal true
+      :duration "350ms"
+      (calendar :class "calendar"))))
+
+(defwindow calendar []
+  :geometry (geometry :x "0%"
+                :y "5px"
+                :width "300px"
+                :height "36px"
+                :anchor "top center")
+  :stacking "fg"
+  :windowtype "toolbar"
+  (calendarWidget))

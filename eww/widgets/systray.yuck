@@ -1,0 +1,2 @@
+(defwidget systrayWidget []
+  (systray :class "systray" :space-evenly false :spacing 10 :icon-size 16))

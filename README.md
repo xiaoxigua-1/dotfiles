@@ -1,9 +1,11 @@
 # Xiao xigua's dotfiles
 
 ## Neovim
+
 Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-public)
 
 ### Requirements
+
 - Neovim >= **0.9.0** (needs to be built with **LuaJIT**)
 - Git >= **2.19.0** (for partial clones support)
 - [LazyVim](https://www.lazyvim.org/)
@@ -22,6 +24,7 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 ## Hyprland setup
 
 ### Requirements
+
 - [Fcitx5](https://github.com/fcitx/fcitx5)
 - [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
@@ -30,28 +33,36 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 - [Walker](https://github.com/abenz1267/walker)
 - [Yazi](https://github.com/sxyazi/yazi)
 - [cliphist](https://github.com/sentriz/cliphist)
-- [Waybar](https://github.com/Alexays/Waybar)
 
-### Waybar setup
+### eww setup
+
 #### Requirements
-- [pamixer](https://github.com/cdemoulins/pamixer)
-- [wlogout](https://github.com/ArtsyMacaw/wlogout)
+
+- a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater) **_(optional, but needed to display some icons)_**
+- [amixer](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture)
+- [jq](https://github.com/jqlang/jq)
+- [OpenRazer](https://openrazer.github.io/) **Optional**
 
 ## Yazi setup
 
 ### Requirements
+
 - [ouch](https://github.com/ouch-org/ouch)
 - [exiftool](https://exiftool.org/)
 - [MediaInfo](https://mediaarea.net/en/MediaInfo) **Optional**
 
 ### Installation
+
 Install all the plugins with locked versions from package.toml
+
 ```sh
 ya pack -i
 ```
 
 ## kitty
+
 Kitty tab bar style taken from [dhay3](https://github.com/kovidgoyal/kitty/discussions/4447#discussioncomment-10428277)
 
 ## Fish shell
+
 Fish shell config taken from [craftzdog](https://github.com/craftzdog/dotfiles-public)

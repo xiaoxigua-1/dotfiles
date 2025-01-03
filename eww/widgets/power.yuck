@@ -5,15 +5,15 @@
     :onhover "${EWW_CMD} update powerMenuRev=true"
     :onhoverlost "${EWW_CMD} update powerMenuRev=false"
     (box :class "power-menu" :space-evenly false
-      (button :onclick "systemctl poweroff" :class "power"
+      (button :onclick "systemctl poweroff" :class "power" :tooltip "Shutdown"
         (label :text "󰐥"))
       (revealer :reveal {powerMenuRev && screen == currentScreen} :transition "slideleft"
         (box :space-evenly false
-          (button :onclick "systemctl reboot"
+          (button :onclick "systemctl reboot" :tooltip "Reboot"
             (label :text "󰑙"))
-          (button :onclick "loginctl lock-session"
+          (button :onclick "loginctl lock-session" :tooltip "Lock"
             (label :text "󱅞"))
-          (button :onclick "hyprctl dispatch exit 0"
+          (button :onclick "hyprctl dispatch exit 0" :tooltip "Logout"
             (label :text "󰍂")))))))
 
 (defwidget powerMenuWidget []

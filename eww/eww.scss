@@ -24,7 +24,7 @@ tooltip,
 .calendar,
 .workspaces,
 .info,
-.power,
+.power-menu,
 .launcher {
   background: #1e1e2e;
   color: #cdd6f4;
@@ -37,10 +37,18 @@ tooltip,
   border-radius: 0 10px 10px 0;
 }
 
-.power {
+.power-menu {
   font-size: 24px;
-  padding: 0 20px;
+  padding: 0 10px;
   border-radius: 10px 0 0 10px;
+
+  button {
+    margin: 0 10px;
+  }
+
+  .power {
+    color: #e0115f;
+  }
 }
 
 .time {

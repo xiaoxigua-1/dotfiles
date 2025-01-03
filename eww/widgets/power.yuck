@@ -1,5 +1,21 @@
-(defvar powerMenu false)
+(defvar powerMenuRev false)
 
-(defwidget powerWidget []
-  (button :class "power" :onclick "${EWW_CMD} update powerMenu=true"
-    (label :text "󰐥")))
+(defwidget powerWidget [screen currentScreen]
+  (eventbox
+    :onhover "${EWW_CMD} update powerMenuRev=true"
+    :onhoverlost "${EWW_CMD} update powerMenuRev=false"
+    (box :class "power-menu" :space-evenly false
+      (button :onclick "systemctl poweroff" :class "power"
+        (label :text "󰐥"))
+      (revealer :reveal {powerMenuRev && screen == currentScreen} :transition "slideleft"
+        (box :space-evenly false
+          (button :onclick "systemctl reboot"
+            (label :text "󰑙"))
+          (button :onclick "loginctl lock-session"
+            (label :text "󱅞"))
+          (button :onclick "hyprctl dispatch exit 0"
+            (label :text "󰍂")))))))
+
+(defwidget powerMenuWidget []
+  (box
+    (label :text "shutdown")))

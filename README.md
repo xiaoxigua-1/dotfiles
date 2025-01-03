@@ -25,14 +25,16 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 
 ### Requirements
 
-- [Fcitx5](https://github.com/fcitx/fcitx5)
-- [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
-- [hyprlock](https://github.com/hyprwm/hyprlock)
-- [hypridle](https://github.com/hyprwm/hypridle)
-- [kitty](https://github.com/kovidgoyal/kitty)
-- [Walker](https://github.com/abenz1267/walker)
-- [Yazi](https://github.com/sxyazi/yazi)
-- [cliphist](https://github.com/sentriz/cliphist)
+- [Fcitx5](https://github.com/fcitx/fcitx5) (Fcitx 5 is a generic input method framework released under LGPL-2.1+.)
+- [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/) (Wallpaper daemon)
+- [hyprlock](https://github.com/hyprwm/hyprlock) (Lock screen)
+- [hypridle](https://github.com/hyprwm/hypridle) (Idle daemon)
+- [kitty](https://github.com/kovidgoyal/kitty) (Cross-platform, fast, feature-rich, GPU based terminal)
+- [Walker](https://github.com/abenz1267/walker) (A wayland native, highly customizable and extensible runner)
+- [Yazi](https://github.com/sxyazi/yazi) (Blazing fast terminal file manager written in Rust, based on async I/O.)
+- [cliphist](https://github.com/sentriz/cliphist) (Wayland clipboard manager)
+- [slurp](https://github.com/emersion/slurp) (Basic area selection tool)
+- [Grim](https://git.sr.ht/~emersion/grim) (Basic screenshot tool)
 
 ### eww setup
 
@@ -40,7 +42,7 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 
 - a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater) **_(optional, but needed to display some icons)_**
 - [amixer](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture)
-- [jq](https://github.com/jqlang/jq)
+- [jq](https://github.com/jqlang/jq) (Command-line JSON processor)
 - [OpenRazer](https://openrazer.github.io/) **Optional**
 
 ## Yazi setup

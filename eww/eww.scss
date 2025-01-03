@@ -24,6 +24,7 @@ tooltip,
 .calendar,
 .workspaces,
 .info,
+.power,
 .launcher {
   background: #1e1e2e;
   color: #cdd6f4;
@@ -34,6 +35,12 @@ tooltip,
   font-size: 24px;
   padding: 0 20px;
   border-radius: 0 10px 10px 0;
+}
+
+.power {
+  font-size: 24px;
+  padding: 0 20px;
+  border-radius: 10px 0 0 10px;
 }
 
 .time {

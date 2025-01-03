@@ -1,6 +1,6 @@
 (include "widgets/bar.yuck")
 
-(defwindow topBarWin
+(defwindow topBarWin [id]
   :geometry (geometry :x "0%"
                 :y "9px"
                 :width "100%"
@@ -9,4 +9,4 @@
   :stacking "fg"
   :windowtype "dock"
   :exclusive true
-(barWidget :screen 0))
+(barWidget :screen id))

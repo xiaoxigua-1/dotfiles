@@ -3,17 +3,17 @@
 (defpoll clock_date :interval "10h" "date '+%Y / %m / %d'")
 (defvar time_rev false)
 
-(defwidget dateWidget []
+(defwidget dateWidget [screen currentScreen]
   (eventbox
-    :onhover "eww update time_rev=true"
-    :onhoverlost "eww update time_rev=false"
-    :onclick "eww open calendar --screen 0"
+    :onhover "${EWW_CMD} update time_rev=true"
+    :onhoverlost "${EWW_CMD} update time_rev=false"
+    :onclick "${EWW_CMD} open calendar --screen ${screen}"
     (box :space-evenly false :class "time"
       (label :text "")
       (label :text "${clock_time}")
       (revealer
         :transition "slideleft"
-        :reveal time_rev
+        :reveal {time_rev && screen == currentScreen}
         :duration "350ms"
         :class "date"
         (box :space-evenly false
@@ -21,7 +21,7 @@
           (label :text "${clock_date}"))))))
 
 (defwidget calendarWidget []
-  (eventbox :onhoverlost "eww close calendar"
+  (eventbox :onhoverlost "${EWW_CMD} close calendar"
     (revealer :transition "slidedown"
       :reveal true
       :duration "350ms"

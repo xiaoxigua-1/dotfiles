@@ -1,11 +1,11 @@
 (deflisten workspaces "scripts/workspaces.sh")
 
-(defwidget workspacesWidget [screen]
+(defwidget workspacesWidget []
   (box :class "workspaces" :space-evenly false
     (for wp in {workspaces}
       (eventbox
         :cursor "pointer"
-        :onclick "hyprctl dispatch workspace ${wp.id}"
         (button
+          :onclick "hyprctl dispatch workspace ${wp.id}"
           :class "button ${wp.active ? 'active' : 'inactive'}"
           :tooltip "${wp.name}")))))

@@ -1,0 +1,5 @@
+(defvar powerMenu false)
+
+(defwidget powerWidget []
+  (button :class "power" :onclick "${EWW_CMD} update powerMenu=true"
+    (label :text "󰐥")))

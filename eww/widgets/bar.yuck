@@ -3,15 +3,20 @@
 (include "widgets/date.yuck")
 (include "widgets/systray.yuck")
 (include "widgets/info.yuck")
+(include "widgets/power.yuck")
+
+(defvar currentScreen 0)
 
 (defwidget barWidget [screen]
-  (centerbox :orientation "h"
+  (eventbox
+    :onhover "${EWW_CMD} update currentScreen=${screen}"
+    (centerbox :orientation "h"
     (box :valign "center" :halign "start" :space-evenly false :spacing 10
       (appLauncher)
-      (workspacesWidget :screen screen))
+      (workspacesWidget))
     (box :valign "center" :halign "center" :space-evenly false
-      (dateWidget))
+      (dateWidget :screen screen :currentScreen currentScreen))
     (box :valign "center" :halign "end" :space-evenly false :spacing 10
       (systrayWidget)
-      (infoWidget))
-))
+      (infoWidget :screen screen :currentScreen currentScreen)
+      (powerWidget)))))

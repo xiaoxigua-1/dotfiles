@@ -1,11 +1,34 @@
-[plugin]
-deps = [
-  { use = "yazi-rs/plugins:full-border", rev = "71c4fc2" },
-  { use = "yazi-rs/plugins:max-preview", rev = "71c4fc2" },
-  { use = "Sonico98/exifaudio", rev = "d794614" },
-  { use = "ndtoan96/ouch", rev = "b869886" },
-  { use = "yazi-rs/plugins:git", rev = "71c4fc2" },
-]
+[[plugin.deps]]
+use = "Sonico98/exifaudio"
+rev = "d794614"
+hash = ""
 
-[flavor]
-deps = [{ use = "dangooddd/kanagawa", rev = "b32f205" }]
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "b869886"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "b12a9ab"
+hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "b12a9ab"
+hash = "5c9dda1a587b8f5b6f63e3d5375bda88"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "b12a9ab"
+hash = "7918aab6a71caf31b58411f789195677"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "b12a9ab"
+hash = "a8e41f245a689dabee8e4ff06483a4eb"
+
+[[flavor.deps]]
+use = "dangooddd/kanagawa"
+rev = "b32f205"
+hash = ""

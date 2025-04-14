@@ -51,6 +51,8 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 
 - [ouch](https://github.com/ouch-org/ouch)
 - [exiftool](https://exiftool.org/)
+- [bat](https://github.com/sharkdp/bat)
+- [glow](https://github.com/charmbracelet/glow)
 - [MediaInfo](https://mediaarea.net/en/MediaInfo) **Optional**
 
 ### Installation

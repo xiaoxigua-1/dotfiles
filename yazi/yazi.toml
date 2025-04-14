@@ -55,7 +55,9 @@ play = [
   { run = 'mpv --force-window %*', orphan = true, for = "windows" },
   { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
-max = [{ run = 'ya emit plugin max-preview', for = "unix" }]
+max = [{ run = 'plugin toggle-pane max-preview' }]
+word = [{ run = 'libreoffice --writer "$@"', orphan = true, for = "unix" }]
+add-sub = [{ run = '''echo sub-add "'$0'" | socat - /tmp/mpv.sock''', desc = "Add sub to MPV", for = "unix" }]
 
 [open]
 rules = [
@@ -79,6 +81,10 @@ rules = [
   { mime = "{audio,video}/*", use = [
     "play",
     "reveal",
+  ] },
+  # Word
+  { mime = "application/{msword,openxmlformats-officedocument*}", use = [
+    "word",
   ] },
   # Archive
   { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [
@@ -105,6 +111,10 @@ rules = [
     "open",
     "reveal",
   ] },
+  { name = "*.{ass,srt,ssa,sty,sup,vtt}", use = [
+    "add-sub",
+    "edit"
+  ] },
 ]
 
 [tasks]
@@ -126,11 +136,11 @@ prepend_previewers = [
   { mime = "application/x-xz", run = "ouch" },
   # Audio media previewer
   { mime = "audio/*", run = "exifaudio" },
-]
 
-prepend_fetchers = [
-  { id = "git", name = "*", run = "git" },
-  { id = "git", name = "*/", run = "git" },
+  # piper
+  { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+  { mime = "text/plain", run = 'piper -- bat -p --color=always "$1"' },
+  { mime = "text/script.*", run = 'piper -- bat -p --color=always "$1"' },
 ]
 
 fetchers = [

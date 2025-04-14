@@ -3,6 +3,11 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 [manager]
+prepend_keymap = [
+  # Smart enter
+  { on = ["<Enter>"], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = ["l"], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" }
+]
 
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
@@ -32,8 +37,8 @@ keymap = [
   { on = [
     "g",
     "g",
-  ], run = "arrow -99999999", desc = "Move cursor to the top" },
-  { on = "G", run = "arrow 99999999", desc = "Move cursor to the bottom" },
+  ], run = "arrow bot", desc = "Move cursor to the top" },
+  { on = "G", run = "arrow top", desc = "Move cursor to the bottom" },
 
   # Navigation
   { on = "h", run = "leave", desc = "Go back to the parent directory" },
@@ -262,6 +267,9 @@ keymap = [
 
   # Compress
   { on = "C", run = "plugin ouch --args=zip", desc = "Compress with ouch" },
+
+  # max preview
+  { on = "T", run = "plugin toggle-pane max-preview" },
 ]
 
 [tasks]

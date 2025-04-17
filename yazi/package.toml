@@ -43,6 +43,11 @@ use = "wekauwau/yatline-tokyo-night"
 rev = "19dbd25"
 hash = "5f00a80a79b9f7fd8e24d6fa5dbb3ae"
 
+[[plugin.deps]]
+use = "boydaihungst/save-clipboard-to-file"
+rev = "3309c78"
+hash = "ced88fdc206396265f0007fc491436cd"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "695dac6"

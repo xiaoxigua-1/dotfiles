@@ -6,7 +6,8 @@
 prepend_keymap = [
   # Smart enter
   { on = ["<Enter>"], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
-  { on = ["l"], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" }
+  { on = ["l"], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = [ "p", "c" ], run = "plugin save-clipboard-to-file", desc = "Paste clipboard content to file and hover after created" },
 ]
 
 keymap = [

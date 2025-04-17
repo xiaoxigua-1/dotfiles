@@ -134,13 +134,21 @@ prepend_previewers = [
   { mime = "application/x-7z-compressed", run = "ouch" },
   { mime = "application/x-rar", run = "ouch" },
   { mime = "application/x-xz", run = "ouch" },
-  # Audio media previewer
-  { mime = "audio/*", run = "exifaudio" },
+
+  # Replace magick, image, video with mediainfo
+  { mime = "{audio,video,image}/*", run = "mediainfo"},
+  { mime = "application/subrip", run = "mediainfo" },
 
   # piper
   { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
   { mime = "text/plain", run = 'piper -- bat -p --color=always "$1"' },
   { mime = "text/script.*", run = 'piper -- bat -p --color=always "$1"' },
+]
+
+prepend_preloaders = [
+  # Replace magick, image, video with mediainfo
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
 ]
 
 fetchers = [

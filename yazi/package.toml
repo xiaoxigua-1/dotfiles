@@ -28,7 +28,22 @@ use = "yazi-rs/plugins:piper"
 rev = "b12a9ab"
 hash = "a8e41f245a689dabee8e4ff06483a4eb"
 
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "436cb5f"
+hash = "144c0ac7a449fcab4e78e942eb41702c"
+
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "90e0284"
+hash = "8d4cb2dfadcbda045ddaa5c274441f9c"
+
+[[plugin.deps]]
+use = "wekauwau/yatline-tokyo-night"
+rev = "19dbd25"
+hash = "5f00a80a79b9f7fd8e24d6fa5dbb3ae"
+
 [[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "b32f205"
-hash = ""
+use = "yazi-rs/flavors:dracula"
+rev = "68326b4"
+hash = "53e1f10ae0f6abd406e463fceca8622a"

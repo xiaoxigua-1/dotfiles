@@ -69,3 +69,6 @@ Kitty tab bar style taken from [dhay3](https://github.com/kovidgoyal/kitty/discu
 ## Fish shell
 
 Fish shell config taken from [craftzdog](https://github.com/craftzdog/dotfiles-public)
+
+- [fnm](https://github.com/Schniz/fnm)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)

@@ -1,3 +1,5 @@
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US
 set fish_greeting ""
 
 set -gx TERM xterm-256color
@@ -14,7 +16,9 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
+alias cd z
 alias g git
+alias python python3
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
@@ -30,26 +34,31 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
-# NVM
-function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-  status --is-command-substitution; and return
+# Flutter
+set -g FLUTTER /opt/flutter
+set -gx PATH $FLUTTER/bin $PATH
 
-  if test -f .nvmrc; and test -r .nvmrc;
-    nvm use
-  else
-  end
-end
+# Android command line tools
+set -g ANDROID_HOME /home/xiaoxigua/Android/Sdk
+set -gx PATH $ANDROID_HOME/emulator $PATH
+set -gx PATH $ANDROID_HOME/platform-tools $PATH
+
+# FNM
+fnm env --use-on-cd --shell fish | source
+
+# zoxide
+zoxide init fish | source
 
 switch (uname)
-  case Darwin
-    source (dirname (status --current-filename))/config-osx.fish
-  case Linux
-    source (dirname (status --current-filename))/config-linux.fish
-  case '*'
-    source (dirname (status --current-filename))/config-windows.fish
+    case Darwin
+        source (dirname (status --current-filename))/config-osx.fish
+    case Linux
+        source (dirname (status --current-filename))/config-linux.fish
+    case '*'
+        source (dirname (status --current-filename))/config-windows.fish
 end
 
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
-  source $LOCAL_CONFIG
+    source $LOCAL_CONFIG
 end

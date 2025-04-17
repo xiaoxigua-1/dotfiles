@@ -1,0 +1,9 @@
+yazi/flavors/
+yazi/plugins/
+fish/functions
+fish/fishd.*
+fish/completions/
+fish/conf.d/*
+!fish/conf.d/tide.fish
+fish/fish_plugins
+fish/fish_variables

@@ -36,6 +36,10 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 - [slurp](https://github.com/emersion/slurp) (Basic area selection tool)
 - [Grim](https://git.sr.ht/~emersion/grim) (Basic screenshot tool)
 
+### Cursor
+
+[cursor-lib](https://github.com/xiaoxigua-1/cursor-lib)
+
 ### eww setup
 
 #### Requirements

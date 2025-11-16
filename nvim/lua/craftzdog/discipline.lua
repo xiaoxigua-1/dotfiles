@@ -12,7 +12,7 @@ function M.cowboy()
 				count = 0
 			end
 			if count >= 10 and vim.bo.buftype ~= "nofile" then
-				ok = pcall(vim.notify, "Hold it Cowboy!", vim.log.levels.WARN, {
+        			ok = pcall(vim.notify, "Hold it Cowboy!", vim.log.levels.WARN, {
 					icon = "🤠",
 					id = "cowboy",
 					keep = function()

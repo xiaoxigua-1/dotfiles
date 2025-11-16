@@ -7,3 +7,5 @@ fish/conf.d/*
 !fish/conf.d/tide.fish
 fish/fish_plugins
 fish/fish_variables
+nvim/lazy-lock.json
+nvim/lazyvim.json

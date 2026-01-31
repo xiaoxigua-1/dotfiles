@@ -1,54 +1,49 @@
 [[plugin.deps]]
-use = "Sonico98/exifaudio"
-rev = "d794614"
-hash = ""
-
-[[plugin.deps]]
-use = "ndtoan96/ouch"
-rev = "b869886"
-hash = ""
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "b12a9ab"
-hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+rev = "6c71385"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "b12a9ab"
-hash = "5c9dda1a587b8f5b6f63e3d5375bda88"
+rev = "6c71385"
+hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "b12a9ab"
-hash = "7918aab6a71caf31b58411f789195677"
+rev = "6c71385"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "b12a9ab"
-hash = "a8e41f245a689dabee8e4ff06483a4eb"
+rev = "6c71385"
+hash = "25aee698dd1081001008ce0cb1cc4da3"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "436cb5f"
-hash = "144c0ac7a449fcab4e78e942eb41702c"
+rev = "ae2a1f1"
+hash = "b2afd25ad3ac851adf2a1b706d1a2add"
 
 [[plugin.deps]]
 use = "imsi32/yatline"
-rev = "90e0284"
-hash = "8d4cb2dfadcbda045ddaa5c274441f9c"
+rev = "3227a30"
+hash = "8bd477fb2deadf9c00f28f8e7669834b"
 
 [[plugin.deps]]
 use = "wekauwau/yatline-tokyo-night"
-rev = "19dbd25"
-hash = "5f00a80a79b9f7fd8e24d6fa5dbb3ae"
+rev = "b4a6310"
+hash = "215729a555fe5286f1eb35520963d08"
 
 [[plugin.deps]]
 use = "boydaihungst/save-clipboard-to-file"
-rev = "3309c78"
-hash = "ced88fdc206396265f0007fc491436cd"
+rev = "9fcd6c4"
+hash = "d67c9d3df0b067be229fb526c77b08ae"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "594b8a2"
+hash = "c9e628fc0312d198db22ae2fa74883b"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
-rev = "695dac6"
-hash = "a8f426ea0d9cb843b081d62ab01364c8"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"

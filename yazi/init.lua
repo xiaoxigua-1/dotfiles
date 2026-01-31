@@ -4,6 +4,7 @@ local tokyo_night_theme = require("yatline-tokyo-night"):setup("night")
 
 require("yatline"):setup({
 	theme = tokyo_night_theme,
+
 	show_background = false,
 	total = { icon = "󰮍", fg = "yellow" },
 	succ = { icon = "", fg = "green" },
@@ -13,21 +14,20 @@ require("yatline"):setup({
 
 	header_line = {
 		left = {
-			section_a = {},
-			section_b = {
+			section_a = {
 				{ type = "line", custom = false, name = "tabs", params = { "left" } },
 			},
+			section_b = {},
 			section_c = {},
 		},
 		right = {
 			section_a = {
-
-				{ type = "coloreds", custom = true, name = { { " 󰇥 ", "#3c3836" } } },
+				{ type = "string", custom = false, name = "date", params = { "%A, %d %B %Y" } },
 			},
-			section_b = {},
-			section_c = {
-				{ type = "coloreds", custom = false, name = "task_states" },
+			section_b = {
+				{ type = "string", custom = false, name = "date", params = { "%X" } },
 			},
+			section_c = {},
 		},
 	},
 

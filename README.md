@@ -63,7 +63,7 @@ Neovim config taken from [craftzdog](https://github.com/craftzdog/dotfiles-publi
 Install all the plugins with locked versions from package.toml
 
 ```sh
-ya pack -i
+ya pkg install
 ```
 
 ## kitty
